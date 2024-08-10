@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegis Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #f0f0f0;
+        }
+
+        .login-form {
+            /* background-color: #ffffff; */
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-container img {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px 10px 10px 40px; /* Adjust padding to make space for the icon */
+            /* margin: 10px 0; */
+            border: 1px solid #ccc;
+            border-radius: 25px;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #41afda;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #0e9fd8;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 12px;
+            color: rgb(175, 175, 175);
+            /* #6C6C6C */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h2>Login</h2>
+
+            <div class="input-container">
+                <img src="./assets/icons/username-icon.png" alt="Username Icon">
+                <input type="text" placeholder="Username" required>
+            </div>
+
+            <div class="input-container">
+                <img src="./assets/icons/password-icon.png" alt="Password Icon">
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <input type="submit" value="Sign In">
+
+            <div class="forgot-password"><p>Forgot your password?</p></div>
+        </form>
+    </div>
+</body>
+</html>
