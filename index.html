@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
+    <title>Elegis Reference</title>
     <style>
         * {
             margin: 0;
@@ -14,22 +14,52 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
             overflow: hidden;
+        }
+
+        .header, .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10% 10px;
+        }
+
+        .footer img {
+            width: 105px;
+            height: 96px;
+            margin: 0 20px;
+        }
+
+        .footer img.pleases {
+            width: 90px;
+        }
+
+        .header img {
+            width: 500px;
+            height: 96px;
+        }
+
+        .footer {
+            justify-content: space-between;
         }
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            background-color: #f0f0f0;
+            flex: 1;
+            width: 100%;
         }
 
         .login-form {
-            /* background-color: #ffffff; */
             padding: 20px;
             border-radius: 10px;
-            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
             width: 300px;
             text-align: center;
             position: relative;
@@ -56,8 +86,7 @@
         .login-form input[type="text"],
         .login-form input[type="password"] {
             width: 100%;
-            padding: 10px 10px 10px 40px; /* Adjust padding to make space for the icon */
-            /* margin: 10px 0; */
+            padding: 10px 10px 10px 40px;
             border: 1px solid #ccc;
             border-radius: 25px;
         }
@@ -80,11 +109,38 @@
             margin-top: 10px;
             font-size: 12px;
             color: rgb(175, 175, 175);
-            /* #6C6C6C */
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+            .login-form {
+                /* width: 100%;
+                padding: 20px;
+                box-shadow: none; */
+            }
+
+            .header img {
+                width: 300px;
+                height: 80px;
+            }
+
+            .footer img, .footer img.pleases {
+                width: 48px;
+                height: 48px;
+                margin: 0 5px;
+            }
+
+            .container {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <img src="./assets/images/elegiss.png" alt="Header Icon">
+    </div>
+
     <div class="container">
         <form class="login-form">
             <h2>Login</h2>
@@ -103,6 +159,14 @@
 
             <div class="forgot-password"><p>Forgot your password?</p></div>
         </form>
+    </div>
+
+    <div class="footer">
+        <img src="./assets/images/dilg.png" alt="Logo 1">
+        <img src="./assets/images/vmlp.png" alt="Logo 2">
+        <img src="./assets/images/pcl.png" alt="Logo 3">
+        <img class="pleases" src="./assets/images/pleases.png" alt="Logo 4">
+        <img src="./assets/images/clrg.png" alt="Logo 5">
     </div>
 </body>
 </html>
